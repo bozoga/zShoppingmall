@@ -1,0 +1,150 @@
+@charset "EUC-KR";
+.header,.nav,.section,.footer{
+	width:1300px;
+	margin-left: auto;
+	margin-right: auto;
+}
+.header ul li{
+	list-style-type: none; float:left;
+}
+.header .hdiv1{
+	height:30px;
+	text-align: center;
+	border-bottom: 1px solid #d5d5d5;
+	font-size: 13px;
+}
+.header .hdiv2{
+	text-align: center;
+	height:150px;
+	border-bottom: 1px solid black;
+}
+.nav{
+	border-bottom: 1px solid #d5d5d5;
+}
+a{
+	text-decoration: none;
+	color: black;
+	margin-left: 20px;
+}
+
+.dropbtn {
+  padding: 15px;
+  font-size: 13px;
+  border: none;
+  background-color: white;
+}
+.dropdown {
+  position: relative;
+  display: inline-block;
+  width:130px;
+  text-align: center;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: 110px;
+  box-shadow: 0px 0px 0px 0px rgba(0,0,0,0);
+  z-index: 1;
+}
+.dropdown-content a {
+  color: black;
+  padding: 3px;
+  height:21px;
+  text-decoration: none;
+  display: block;
+  font-size: 12px;
+}
+.dropdown-content a:hover{
+	background-color: #808080;
+	color: white;
+}
+.dropdown:hover .dropdown-content {display: block;}
+.dropdown:hover .dropbtn{
+	color: #808080;
+}
+.seclog1 .id, .password{
+	border:1px solid grey;
+	width: 300px;
+    height: 40px;
+    text-align: center;
+}
+.seclog1 .id input, .password input{
+	border:none;
+	margin:4px;
+    width: 280px;
+    height: 30px;
+    font-size: 14px;
+}
+.seclog1 .id{
+	margin-bottom: 30px; 
+}
+.seclog1 .log_btn1,.log_btn2{
+    width:300px;
+    height: 40px;
+    color:white;
+    text-align: center;
+    padding-top: 20px;
+}
+.seclog1 .log_btn1{
+    background-color: rgb(19, 19, 19);
+}
+.seclog1 .log_btn2{
+    background-color: rgb(95, 95, 95);
+}
+.seclog1 .fs1{
+    width: 400px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    height: 450px;
+}
+.seclog1 .loginbox{
+    margin-top: -10px;
+    margin-left: 45px;
+    margin-right: auto;
+}
+.seclog1 .idsearch{
+    margin-left: -70px;
+}
+.seclog1 h2{
+     margin-bottom: 30px;
+}
+.secjoin1 table, table tr td{
+    border-collapse: collapse;
+    border:1px solid grey;
+}
+.secjoin1 .join_td1{
+    width:130px;
+    padding:10px;
+    font-size: 12px;
+}
+.secjoin1 .join_td2{
+    width:450px;
+    padding:10px;
+    font-size: 12px;
+}
+.secjoin1 input{
+    height: 20px;
+}
+.secjoin1 table{
+    margin-left: auto;
+    margin-right: auto;
+}
+.secjoin1 .join_btn1,.join_btn2{
+    width:200px;
+    height: 40px;
+    color:white;
+    text-align: center;
+    padding-top: 20px;
+}
+.secjoin1 .join_btn1{
+    background-color: rgb(19, 19, 19);
+    float: left;
+    margin-left: 450px;
+}
+.secjoin1 .join_btn2{
+    background-color: rgb(95, 95, 95);
+    float: left;
+    margin-top:-5px;
+}
