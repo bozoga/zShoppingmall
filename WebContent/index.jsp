@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<link rel="stylesheet" href="css/style.css?a=a">
+<link rel="stylesheet" href="css/style.css">
 <title>쇼핑몰</title>
 </head>
 <body>
@@ -12,7 +12,7 @@
 	<%@ include file="nav.jsp"%>
 
 	<div class="section">
-		<div class="sec1">
+		<div class="sec1" style="text-align: center;">
 			<img src="img/fall.jpg">
 		</div>
 	</div>

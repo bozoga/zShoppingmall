@@ -12,9 +12,45 @@
 		
 		if(fm.id.value==""){
 			alert("아이디를 입력해주세요");
+			fm.id.focus();
+			return false;
+		}
+		else if(fm.password.value==""){
+			alert("비밀번호를 입력해주세요");
+			fm.password.focus();
+			return false;
+		}
+		else if(fm.password.value!=fm.passwordck.value){
+			alert("비밀번호와 비밀번호 확인이 다릅니다");
+			fm.password.focus();
+			return false;
+		}
+		else if(fm.name.value==""){
+			alert("이름을 입력해주세요");
+			fm.name.focus();
+			return false;
+		}
+		else if(fm.address.value==""){
+			alert("주소를 입력해주세요");
+			fm.addressme.focus();
+			return false;
 		}
 		else{
 			fm.action="join.do";
+			fm.method="post";
+			fm.submit();
+		}
+	}
+	function check_id(){
+		
+		if(fm.id.value==""){
+			alert("아이디를 입력해주세요");
+			fm.id.focus();
+			return false;
+		}
+
+		else{
+			fm.action="checkId.do";
 			fm.method="post";
 			fm.submit();
 		}
@@ -31,7 +67,9 @@
                 <table>
                     <tr>
                         <td class="join_td1">아이디</td>
-                        <td class="join_td2"><input type="text" id="id" name="id" style="width: 180px"></td>
+                        <td class="join_td2"><input type="text" id="id" name="id" style="width: 180px">
+                       	<input type="button" value="중복체크" onclick="javascript:check_id()" style="height: 25px">
+                        </td>
                     </tr>
                     <tr>
                         <td class="join_td1">비밀번호</td>

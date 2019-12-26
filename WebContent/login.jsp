@@ -9,9 +9,15 @@
 <title>쇼핑몰</title>
 <script>
 	function check_login(){
-		
 		if(fm.id.value==""){
 			alert("아이디를 입력해주세요");
+			fm.id.focus();
+			return false;
+		}
+		else if(fm.password.value==""){
+			alert("비밀번호를 입력해주세요");
+			fm.password.focus();
+			return false;
 		}
 		else{
 			fm.action="login.do";
@@ -19,6 +25,11 @@
 			fm.submit();
 		}
 	}
+    function pressEnter(){
+        if(event.keyCode == 13){
+            check_login();
+        }
+    }
 </script>
 </head>
 <body>
@@ -31,22 +42,19 @@
 				<div><h2>MEMBER LOGIN</h2></div>
 				<div class="loginbox">
 					<p class="id">
-						<input type="text" name="id" id="id" >
+						<input type="text" name="id" id="id" placeholder="아이디">
 					</p>
 				</div>
 				<div class="loginbox">
 					<p class="password">
-						<input type="text" name="password" id="password">
+						<input type="password" name="password" id="password" placeholder="패스워드" onKeyDown="pressEnter()">
 					</p>
-				</div>
+				</div><br>
 				<div class="loginbox">
 					<a href="javascript:check_login()"><p class="log_btn1">로그인</p></a>
                 </div>
                 <div class="loginbox">
-					<div class="idsearch"><a href="">아이디찾기</a>&nbsp;&nbsp;<a href="">비밀번호찾기</a></div>
-				</div>
-                <div class="loginbox">
-					<a href=""><p class="log_btn2">회원가입</p></a>
+					<a href="join.jsp"><p class="log_btn2">회원가입</p></a>
 				</div>
 			</fieldset>
 			</form>

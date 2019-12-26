@@ -6,12 +6,17 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<link rel="stylesheet" href="css/style.css?a=aaa">
+<link rel="stylesheet" href="css/style.css?a=aa">
 <title>쇼핑몰</title>
 <%
 	GoodsVO vo = new GoodsVO();
 	GoodsDAO dao = GoodsDAO.getInstance();
-	ArrayList<GoodsVO> list = dao.getGoodsList(vo);
+	ArrayList<GoodsVO> list = null;
+	if (session.getAttribute("list") != null) {
+		list = (ArrayList<GoodsVO>) session.getAttribute("list");
+	} else {
+		list = dao.getGoodsList(vo);
+	}
 %>
 <script>
 	
@@ -26,24 +31,30 @@
 		</div>
 		<div class="seclist1">
 			<%
-				for (GoodsVO gvo : list) {
+				if (list != null) {
+					for (GoodsVO gvo : list) {
 			%>
-			<table>
-				<tr>
-					<td><a href="read.do?id=<%=gvo.getId()%>"><img
-							src="<%=gvo.getImg()%>" width="300px"></a></td>
-				</tr>
-				<tr>
-					<td>이름 : <%=gvo.getName()%></td>
-				</tr>
-				<tr>
-					<td>가격 : <%=gvo.getPrice()%>원</td>
-				</tr>
-				<tr>
-					<td>수량 : <%=gvo.getStock()%></td>
-				</tr>
-			</table>
+			<div class="goodslist1">
+				<table>
+					<tr>
+						<td><a href="read.do?id=<%=gvo.getId()%>"><img
+								src="<%=gvo.getImg()%>" width="400px"></a></td>
+					</tr>
+					<tr>
+						<td class="sl_td1"><%=gvo.getName()%></td>
+					</tr>
+					<tr>
+						<td class="sl_td2"><%=gvo.getPrice()%>원</td>
+					</tr>
+					<tr>
+						<td class="sl_td2"><a
+							href="insertCart.do?id=<%=gvo.getId()%>"><img
+								src="img/icon_cart.png"></a></td>
+					</tr>
+				</table>
+			</div>
 			<%
+				}
 				}
 			%>
 		</div>
